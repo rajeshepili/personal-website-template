@@ -129,22 +129,3 @@
 .container {
   @apply mx-auto;
 }
-
-@keyframes dashRotate {
-  0% {
-    border-image-source: linear-gradient(90deg, transparent 25%, #f0f 25%, #f0f 50%, transparent 50%, transparent 75%, #f0f 75%, #f0f);
-    border-image-slice: 1;
-    border-image-width: 8px;
-    transform: rotate(0deg);
-  }
-  100% {
-    border-image-source: linear-gradient(90deg, transparent 25%, #f0f 25%, #f0f 50%, transparent 50%, transparent 75%, #f0f 75%, #f0f);
-    border-image-slice: 1;
-    border-image-width: 8px;
-    transform: rotate(360deg);
-  }
-}
-
-.animate-dash {
-  animation: dashRotate linear infinite;
-}

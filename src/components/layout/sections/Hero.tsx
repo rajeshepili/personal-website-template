@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Button } from "@/components/ui/button";
@@ -15,9 +14,9 @@ export default function Hero() {
         offset: ["start start", "end start"],
     });
 
-    const contentY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], ["0%", "50%", "100%", "150%", "200%"]);
+    const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
     const contentOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    const imageY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], ["0%", "25%", "50%", "75%", "100%"]);
+    const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     const textVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -81,7 +80,7 @@ export default function Hero() {
                     custom={2}
                     variants={textVariants}
                 >
-                    <Button size="lg" asChild className="animate-pulse-subtle">
+                    <Button size="lg" asChild>
                         <Link href="#projects">Read My Latest Posts</Link>
                     </Button>
                 </motion.div>
