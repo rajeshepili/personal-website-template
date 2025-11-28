@@ -1,6 +1,6 @@
 import { betterAuth } from "better-auth";
 import { nextCookies } from "better-auth/next-js";
-import { username } from "better-auth/plugins"
+import { username, admin } from "better-auth/plugins"
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { prisma } from "./prisma";
 
@@ -15,6 +15,7 @@ export const auth = betterAuth({
         nextCookies(),
         username({
             minUsernameLength: 5,
-        })
+        }),
+        admin()
     ]
 });

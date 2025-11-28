@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { Merienda, Quicksand } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/navbar";
 import { config } from "@/config";
-import Footer from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import ScrollToTop from "@/components/ScrollToTop";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -38,10 +35,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <ScrollToTop />
+          {children}
         </ThemeProvider>
       </body>
     </html>
